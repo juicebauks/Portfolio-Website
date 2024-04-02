@@ -91,7 +91,17 @@ body {
   align-items: center;
   z-index: 1;
 } */
-
+.videowrap {
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 #homevideo {
   display: block;
 margin: 0 auto;
