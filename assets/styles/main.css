@@ -364,7 +364,7 @@ body {
   font-weight: 500;
   line-height: 80%;
   margin-left: 1cm;
-  letter-spacing: -.7rem;
+  letter-spacing: -2pt;
   z-index: 100;
 
 }
@@ -1139,7 +1139,6 @@ a:active {
 #connect2 {
   margin: 0px;
   color: #000;
-  font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
   line-height: 200%;
 }
@@ -1148,7 +1147,7 @@ a:active {
   text-decoration: none;
   color: #a1a1a1;
   font-family: "neue-haas-grotesk-text",sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 601px) {
@@ -1266,4 +1265,26 @@ a:active {
   text-align: center;
   font-size: 3rem;
   font-family: 'Times New Roman', Times, serif;
+}
+
+/* Gallery */
+#gallerycol {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.gcol {
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+}
+.gcol a img{
+  display: ;
+  margin-bottom: 1vw;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#galleryrow {
+  padding: 2vw;
 }
