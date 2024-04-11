@@ -28,7 +28,7 @@ body {
   box-shadow: 1px 1px 5px 0px var(--gray);
   top: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   z-index: 1;
 }
 
@@ -44,11 +44,12 @@ body {
   }
 }
 
+
 /* Logo */
 
 @media screen and (min-width: 601px) {
   .logo {
-    height: 40px;
+    height: 30px;
     margin-left: 15vw;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -57,9 +58,9 @@ body {
 
 @media screen and (max-width: 600px) {
   .logo {
-    height: 30px;
+    height: 20px;
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
   }
 }
@@ -73,8 +74,11 @@ body {
   -webkit-filter: blur(0px);
   display: inline-block;
   color: var(--white);
-  transition: all .2s;
+  transition: all 0.2s;
 }
+
+
+
 
 /* Nav menu */
 .nav {
@@ -88,11 +92,11 @@ body {
 
 .menu2 a {
   display: block;
-  padding: 16px;
+  padding: 6px;
   color: #000000;
   font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 24px;
   text-align: right;
   z-index: 1;
 }
