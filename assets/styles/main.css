@@ -324,6 +324,7 @@ z-index: 5;
   #lvcol12 {
     height: 90vh;
     margin-top: 40vh;
+    overflow: hidden;
   }
 }
 
@@ -335,6 +336,7 @@ z-index: 5;
   #lvcol12 {
     height: 60vh;
     margin-top: 10vh;
+    overflow: hidden;
   }
 }
 #lvz {
