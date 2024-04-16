@@ -268,7 +268,7 @@ body {
 .name {
   color: #1a1a1a;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 80%;
   margin-left: 1cm;
   letter-spacing: -2pt;
@@ -362,6 +362,7 @@ z-index: 5;
 @media screen and (max-width: 600px) {
   .name2 {
     font-size: 5vw;
+    letter-spacing: 1%;
   }
 }
 
