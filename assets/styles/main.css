@@ -1424,7 +1424,7 @@ a:active {
 }
 
 #projectlist > * {
-  transition: ease-in-out 200ms;
+  transition: 200ms;
 }
 
 .card {
@@ -1435,7 +1435,7 @@ a:active {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  transition: ease-in-out 200ms;
+  transition: 200ms;
 }
 
 .card p {
