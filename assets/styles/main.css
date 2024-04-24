@@ -818,7 +818,7 @@ a:active {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: #000;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .seemore a {
@@ -1447,7 +1447,7 @@ a:active {
     margin-top: 0px;
     padding: 80px;
     height: 80vh;
-    font-size: 6vh;
+    font-size: 5vh;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     list-style: none;
@@ -1498,7 +1498,7 @@ a:active {
 }
 
 .card p {
-  font-size: large;
+  font-size: small;
 }
 
 .card img {
@@ -1547,5 +1547,9 @@ body:has(#magproj:hover) #p10 {
 }
 
 body:has(#owprodproj:hover) #p11 {
+  opacity: 1;
+}
+
+body:has(#porscheproj:hover) #p12 {
   opacity: 1;
 }
