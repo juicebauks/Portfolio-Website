@@ -555,8 +555,49 @@ a:active {
   }
 }
 
+
+
+
+
+
 /* project pages */
+#topofpage {
+  margin-top: 40px;
+}
+.information p {
+  height: fit-content;
+  display: block;
+  width: 45vw; min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  font-size: clamp(15px, 1.3vw, 22px);
+}
+#leftlabel {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-size: clamp(12px, .8vw, 22px);
+  font-weight: 500;
+  color: #9f9f9f;
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  
+}
+
 @media screen and (min-width: 1025px) {
+  #leftlabel {
+    margin-left: 15vw;;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #leftlabel {
+    margin-left: 10px;;
+  }
+}
+/* @media screen and (min-width: 1025px) {
   #leftlabel {
     margin-top: 40px;
     margin-bottom: 15px;
@@ -641,6 +682,8 @@ a:active {
   #shortinfo {
     text-align: left;
     font-size: 200%;
+    font-weight: 400;
+    color: #4e4e4e;
   }
 }
 
@@ -648,8 +691,10 @@ a:active {
   #shortinfo {
     text-align: left;
     font-size: 100%;
+    font-weight: 400;
+    color: #4e4e4e;
   }
-}
+} */
 
 /* Project Page */
 @media only screen and (max-width: 1024px) {
@@ -660,6 +705,13 @@ a:active {
   #row2 {
     display: contents;
   }
+  .row1 {
+    display: none;
+  }
+
+  .row2 {
+    display: contents;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -668,6 +720,13 @@ a:active {
   }
 
   #row2 {
+    display: none;
+  }
+  .row1 {
+    display: contents;
+  }
+
+  .row2 {
     display: none;
   }
 }
