@@ -766,7 +766,8 @@ a:active {
   }
 
   #projheader {
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 2rem;
     color: #000;
     line-height: 105%;
   }
@@ -1553,5 +1554,13 @@ body:has(#magproj:hover) #p10 {
 }
 
 body:has(#owprodproj:hover) #p11 {
+  opacity: 1;
+}
+
+body:has(#porscheproj:hover) #p12 {
+  opacity: 1;
+}
+
+body:has(#legoproj:hover) #p13 {
   opacity: 1;
 }
