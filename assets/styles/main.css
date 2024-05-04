@@ -568,12 +568,12 @@ a:active {
   height: fit-content;
   display: block;
   width: 45vw;
-  min-width: 300px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20vh;
   padding-bottom: 20vh;
-  font-size: clamp(15px, 1.3vw, 22px);
+  font-size: clamp(12px, 1.3vw, 22px);
 }
 
 #leftlabel {
