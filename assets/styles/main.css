@@ -1564,3 +1564,6 @@ body:has(#porscheproj:hover) #p12 {
 body:has(#legoproj:hover) #p13 {
   opacity: 1;
 }
+body:has(#exerciseproj:hover) #p14 {
+  opacity: 1;
+}
