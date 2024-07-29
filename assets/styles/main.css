@@ -262,7 +262,7 @@ body {
 }
 
 .name {
-  color: #1a1a1a;
+  color: #2f2f2f;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   line-height: 80%;
@@ -357,7 +357,7 @@ body {
 }
 
 .name2 {
-  color: #1a1a1a;
+  color: #2f2f2f;
   font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 80%;
@@ -1253,7 +1253,7 @@ a:active {
 /* Medium Screen */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   #contactheader {
-    color: #000;
+    color: #2f2f2f;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
   }
@@ -1327,7 +1327,7 @@ a:active {
 /* Small Screen */
 @media screen and (max-width: 600px) {
   #contactheader {
-    color: #000;
+    color: #2f2f2f;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
   }
