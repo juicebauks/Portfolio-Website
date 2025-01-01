@@ -1567,3 +1567,6 @@ body:has(#legoproj:hover) #p13 {
 body:has(#exerciseproj:hover) #p14 {
   opacity: 1;
 }
+body:has(#flourishproj:hover) #p15 {
+  opacity: 1;
+}
