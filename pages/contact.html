@@ -108,9 +108,18 @@
         font-size: 1rem;
     }
 
-    .contact-form textarea {
-        height: 200px;
+    @media (max-width: 600px) {
+        .contact-form textarea {
+            height: 120px;
+        }
     }
+
+    @media (min-width: 601px) {
+        .contact-form textarea {
+            height: 200px;
+        }
+    }
+
 
     .contact-form button {
         background-color: #2f2f2f;
@@ -148,7 +157,7 @@
 
         #connect {
             font-size: 1.8rem;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             font-weight: 900;
         }
 
@@ -183,7 +192,7 @@
         .container {
             width: 100vw;
             /* Ensure full screen width */
-            padding: 20px 3%;
+            padding: 0px 10%;
             /* Reduce padding to maximize space */
         }
 
