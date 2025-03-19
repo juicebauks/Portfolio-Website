@@ -24,41 +24,54 @@ body {
 }
 
 
+/* General Styles */
+body {
+    background-color: #efeeec;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 /* Contact Section */
 .container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 5%;
+    padding: 40px 5%;
     max-width: 1200px;
     margin: auto;
 }
 
 /* Large "CONTACT." Header */
 #contact-header {
-    font-size: 6vw; /* Large but adaptive */
+    font-size: 6vw; /* Large, but adaptive */
     font-weight: bold;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* Contact Form Styling */
+/* Contact Section Layout */
 .contact-section {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
 }
 
 /* Contact Info */
 #connect {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
 }
 
 #connect-info {
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 #connect-info a {
@@ -73,7 +86,7 @@ body {
 
 /* Contact Form */
 .contact-form {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,9 +95,9 @@ body {
 
 .contact-form input, 
 .contact-form textarea {
-    width: 100%; /* Full width */
-    max-width: 600px;
-    padding: 10px;
+    width: 95%; /* Takes up most of the screen */
+    max-width: 700px;
+    padding: 12px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -92,19 +105,19 @@ body {
 }
 
 .contact-form textarea {
-    height: 120px;
+    height: 100px;
 }
 
 .contact-form button {
     background-color: #2f2f2f;
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    width: 100%;
-    max-width: 600px;
+    width: 95%;
+    max-width: 700px;
 }
 
 .contact-form button:hover {
@@ -114,26 +127,36 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .container {
-        padding: 30px 3%;
+        padding: 20px 2%;
     }
 
     #contact-header {
-        font-size: 9vw; /* Keep large header */
+        font-size: 10vw; /* Keep it large but fit the screen */
         text-align: center;
+        margin-bottom: 10px;
     }
 
     .contact-section {
         max-width: 100%;
+        padding: 0 2%;
     }
 
     #connect {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
     }
 
+    #connect-info {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+
+    /* Make Form Full-Width */
     .contact-form input, 
     .contact-form textarea, 
     .contact-form button {
-        width: 90%; /* Slightly more space on mobile */
+        width: 98%;
         font-size: 1rem;
     }
 }
