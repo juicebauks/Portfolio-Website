@@ -1,133 +1,204 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/ozx6lnu.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/ozx6lnu.css" />
-    <title>Jace Kachlein Design Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="../assets/styles/bootstrap/css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../assets/styles/bootstrap/css/bootstrap-theme.css"
-    />
-    <link rel="stylesheet" href="../assets/styles/main.css" />
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jace Kachlein | Contact</title>
+    
+    <!-- External Styles -->
+    <link rel="stylesheet" href="https://use.typekit.net/ozx6lnu.css">
+    <link rel="stylesheet" href="../assets/styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<style>
+  /* General Styles */
+body {
+    background-color: #efeeec;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contact Section */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5%;
+}
+
+.contact-section {
+    text-align: center;
+    max-width: 800px; /* Wider Form */
+    width: 100%;
+}
+
+/* Large "CONTACT." Header */
+#contact-header {
+    font-size: 7vw; /* Large and Scalable */
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+/* Contact Info */
+#connect {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#connect-info {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+#connect-info a {
+    color: #2f2f2f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#connect-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%; /* Wider form elements */
+    max-width: 600px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 14px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+.footer {
+    background-color: #efeeec;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .menu a {
+    color: #2f2f2f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.footer .menu a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #contact-header {
+        font-size: 10vw; /* Slightly Larger on Mobile */
+        text-align: center;
     }
 
-    #footerrow {
-      position: absolute;
-      bottom: 0;
-      width: 100vw;
-      margin: auto;
-    }
-  </style>
+    .contact-form
 
-  <body>
+</style>
+<body>
+
+    <!-- Header -->
     <header class="header">
-      <a href="../index.html">
-        <img src="../assets/images/logo.png" class="logo" />
-      </a>
-      <input class="side-menu" type="checkbox" id="side-menu" />
-      <label class="hamb" for="side-menu"
-        ><span class="hamb-line"></span
-      ></label>
+        <a href="../index.html">
+            <img src="../assets/images/logo.png" class="logo" alt="Jace Kachlein Logo">
+        </a>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-      <nav class="nav">
-        <ul class="menu2">
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li>
-            <a href="contact.html"><del>Contact</del></a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav">
+            <ul class="menu2">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container-fluid">
-      <div class="row" id="row1">
-        <div class="col-md-12" style="display: flex; flex-direction: column">
-          <div class="contact">
-            <h1 id="contactheader">CONTACT.</h1>
-          </div>
-          <div class="info">
-            <h1 id="connect">JACE KACHLEIN</h1>
-            <br />
-            <p id="connect2">
-              <a href="mailto:kachlein.design@gmail.com"
-                >kachlein.design@gmail.com</a
-              >
-              <br />
-              <a href="https://www.linkedin.com/in/jace-kachlein/">LinkedIn</a
-              ><br />
-              <a
-                href="https://drive.google.com/file/d/1o-2rpnDoe-DKwxuy22cepAnJc8YiTl_8/view?usp=drive_link"
-                >Resume</a
-              ><br />
-              
-              <a href="about.html">About Me</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="row2">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="contact">
-                <h1 id="contactheader">CONTACT.</h1>
-              </div>
-            </div>
-            <div class="col-md-6" id="contact2">
-              <div class="info">
-                <h1 id="connect">JACE KACHLEIN</h1>
-                <br />
-                <p id="connect2">
-                  <a href="mailto:kachlein.design@gmail.com"
-                    >kachlein.design@gmail.com</a
-                  >
-                  <br />
-                  <a href="https://www.linkedin.com/in/jace-kachlein/"
-                    >LinkedIn</a
-                  ><br />
-                  <a
-                href="https://drive.google.com/file/d/1o-2rpnDoe-DKwxuy22cepAnJc8YiTl_8/view?usp=drive_link"
-                >Resume</a
-              ><br />
-                  <a href="about.html">About Me</a>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <div class="contact-section">
+            <h1 id="contact-header">CONTACT.</h1>
+            
+            <div class="contact-info">
+                <h2 id="connect">JACE KACHLEIN</h2>
+                <p id="connect-info">
+                    <a href="mailto:kachlein.design@gmail.com">kachlein.design@gmail.com</a><br>
+                    <a href="https://www.linkedin.com/in/jace-kachlein/">LinkedIn</a><br>
+                    <a href="https://drive.google.com/file/d/1o-2rpnDoe-DKwxuy22cepAnJc8YiTl_8/view?usp=sharing">Resume</a><br>
+                    <a href="about.html">About Me</a>
                 </p>
-              </div>
             </div>
-          </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="mailto:kachlein.design@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
-      </div>
     </div>
 
-    <footer class="footer" style="position: absolute">
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="../index.html">Home</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="projects.html">Work</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="about.html">About</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-      <p align="center">&copy;2024 Jace Kachlein | All Rights Reserved</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy;2024 Jace Kachlein | All Rights Reserved</p>
     </footer>
-  </body>
+
+</body>
 </html>
