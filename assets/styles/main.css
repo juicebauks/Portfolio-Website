@@ -1441,6 +1441,14 @@ a:active {
   object-fit: contain;
 }
 
+.gcol img {
+  display: ;
+  margin-bottom: 1vw;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 #galleryrow {
   padding: 2vw;
 }
