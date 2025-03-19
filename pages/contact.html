@@ -23,6 +23,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* Contact Section */
 .container {
     flex: 1;
@@ -30,31 +31,34 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px 5%;
-}
-
-.contact-section {
-    text-align: center;
-    max-width: 800px; /* Wider Form */
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Large "CONTACT." Header */
 #contact-header {
-    font-size: 7vw; /* Large and Scalable */
+    font-size: 6vw; /* Large but adaptive */
     font-weight: bold;
     text-align: right;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-section {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
 }
 
 /* Contact Info */
 #connect {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 #connect-info {
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 #connect-info a {
@@ -69,36 +73,37 @@ body {
 
 /* Contact Form */
 .contact-form {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 80%; /* Wider form elements */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Full width */
     max-width: 600px;
-    padding: 12px;
-    margin: 10px 0;
+    padding: 10px;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 120px;
 }
 
 .contact-form button {
     background-color: #2f2f2f;
     color: white;
-    padding: 14px;
+    padding: 12px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -106,44 +111,32 @@ body {
     background-color: #444;
 }
 
-/* Footer */
-.footer {
-    background-color: #efeeec;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-.footer .menu {
-    list-style: none;
-    padding: 0;
-}
-
-.footer .menu li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer .menu a {
-    color: #2f2f2f;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.footer .menu a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile Adjustments */
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .container {
+        padding: 30px 3%;
+    }
+
     #contact-header {
-        font-size: 10vw; /* Slightly Larger on Mobile */
+        font-size: 9vw; /* Keep large header */
         text-align: center;
     }
 
-    .contact-form
+    .contact-section {
+        max-width: 100%;
+    }
 
+    #connect {
+        font-size: 1.5rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        width: 90%; /* Slightly more space on mobile */
+        font-size: 1rem;
+    }
+}
 </style>
 <body>
 
