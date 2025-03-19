@@ -1,166 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jace Kachlein | Contact</title>
-    
+
     <!-- External Styles -->
     <link rel="stylesheet" href="https://use.typekit.net/ozx6lnu.css">
     <link rel="stylesheet" href="../assets/styles/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/styles/main.css">
 </head>
 <style>
-  /* General Styles */
-body {
-    background-color: #efeeec;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    /* General Styles */
+    /* General Styles */
 
 
-/* General Styles */
-body {
-    background-color: #efeeec;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
+    * {
+        color: #2f2f2f;
+    }
 
-/* Contact Section */
-.container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 5%;
-    max-width: 1200px;
-    margin: auto;
-}
+    body {
+        background-color: #efeeec;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
-/* Large "CONTACT." Header */
-#contact-header {
-    font-size: 6vw; /* Large, but adaptive */
-    font-weight: bold;
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-/* Contact Section Layout */
-.contact-section {
-    text-align: center;
-    max-width: 900px;
-    width: 100%;
-}
-
-/* Contact Info */
-#connect {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-}
-
-#connect-info {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-#connect-info a {
-    color: #2f2f2f;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-#connect-info a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Form */
-.contact-form {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 95%; /* Takes up most of the screen */
-    max-width: 700px;
-    padding: 12px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form textarea {
-    height: 100px;
-}
-
-.contact-form button {
-    background-color: #2f2f2f;
-    color: white;
-    padding: 14px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 95%;
-    max-width: 700px;
-}
-
-.contact-form button:hover {
-    background-color: #444;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
+    /* Contact Section */
     .container {
-        padding: 20px 2%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 5%;
+        max-width: 1200px;
+        margin: auto;
     }
 
+    /* Large "CONTACT." Header */
     #contact-header {
-        font-size: 10vw; /* Keep it large but fit the screen */
-        text-align: center;
-        margin-bottom: 10px;
+        font-size: 6vw;
+        /* Large, but adaptive */
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 15px;
     }
 
+    /* Contact Section Layout */
     .contact-section {
-        max-width: 100%;
-        padding: 0 2%;
+        text-align: center;
+        max-width: 900px;
+        width: 100%;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #connect {
-        font-size: 1.3rem;
-        margin-bottom: 5px;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
     }
 
     #connect-info {
-        font-size: 0.9rem;
-        line-height: 1.3;
-        margin-bottom: 5px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
 
-    /* Make Form Full-Width */
-    .contact-form input, 
-    .contact-form textarea, 
-    .contact-form button {
-        width: 98%;
+    #connect-info a {
+        color: #2f2f2f;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    #connect-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 95%;
+        /* Takes up most of the screen */
+        max-width: 700px;
+        padding: 12px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
         font-size: 1rem;
     }
-}
+
+    .contact-form textarea {
+        height: 200px;
+    }
+
+    .contact-form button {
+        background-color: #2f2f2f;
+        color: white;
+        padding: 14px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 95%;
+        max-width: 700px;
+    }
+
+    .contact-form button:hover {
+        background-color: #444;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px 2%;
+        }
+
+        #contact-header {
+            font-size: 10vw;
+            /* Keep it large but fit the screen */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-section {
+            max-width: 100%;
+            padding: 0 2%;
+        }
+
+        #connect {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-weight: 900;
+        }
+
+        #connect-info {
+            font-size: 1.5rem;
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+
+        /* Make Form Full-Width */
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 98%;
+            font-size: 1rem;
+        }
+    }
+
+    /* Fix Container Width */
+    .container {
+        width: 100%;
+        /* Allow full width */
+        max-width: 1200px;
+        /* Keep it controlled on larger screens */
+        margin: auto;
+        /* Center it */
+        padding: 40px 5%;
+    }
+
+    /* Full-width Form on Mobile */
+    @media (max-width: 768px) {
+        .container {
+            width: 100vw;
+            /* Ensure full screen width */
+            padding: 20px 3%;
+            /* Reduce padding to maximize space */
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            /* Force full width */
+            max-width: none;
+            /* Remove any limits */
+        }
+    }
 </style>
+
 <body>
 
     <!-- Header -->
@@ -175,33 +212,39 @@ body {
             <ul class="menu2">
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html"><del>Contact</del></a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="row">
+        <div class="col-med-12" id="projectpage">
+            <div class="name">Contact.</div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <div class="container">
         <div class="contact-section">
-            <h1 id="contact-header">CONTACT.</h1>
-            
+
             <div class="contact-info">
-                <h2 id="connect">JACE KACHLEIN</h2>
+                <h2 id="connect" style="color: #2f2f2f;">JACE KACHLEIN</h2>
                 <p id="connect-info">
                     <a href="mailto:kachlein.design@gmail.com">kachlein.design@gmail.com</a><br>
                     <a href="https://www.linkedin.com/in/jace-kachlein/">LinkedIn</a><br>
-                    <a href="https://drive.google.com/file/d/1o-2rpnDoe-DKwxuy22cepAnJc8YiTl_8/view?usp=sharing">Resume</a><br>
+                    <a
+                        href="https://drive.google.com/file/d/1o-2rpnDoe-DKwxuy22cepAnJc8YiTl_8/view?usp=sharing">Resume</a><br>
                     <a href="about.html">About Me</a>
                 </p>
             </div>
 
             <!-- Contact Form -->
             <form class="contact-form" action="https://formspree.io/f/movejjpl" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-</form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
 
         </div>
     </div>
@@ -209,13 +252,14 @@ body {
     <!-- Footer -->
     <footer class="footer">
         <ul class="menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="projects.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="projects.html">Work</a></li>
+            <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
         </ul>
-        <p>&copy;2024 Jace Kachlein | All Rights Reserved</p>
+        <p align="center">&copy;2024 Jace Kachlein | All Rights Reserved</p>
     </footer>
 
 </body>
+
 </html>
