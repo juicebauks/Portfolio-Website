@@ -1,18 +1,25 @@
 body {
-  background-color: #efeeec;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
 }
 
 html {
-  margin-left: calc(100vw - 100%);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .container-fluid {
   justify-content: center;
   padding-left: 0;
-  color: #2f2f2f;
-  background-color: #efeeec;
+  padding-right: 0;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
@@ -33,7 +40,7 @@ html {
 
 /* Header */
 .header {
-  background-color: #efeeec;
+  background-color: #00000000;
   box-shadow: 1px 1px 5px 0px var(--gray);
   top: 0;
   width: 100%;
@@ -58,7 +65,7 @@ html {
 @media screen and (min-width: 601px) {
   .logo {
     height: 25px;
-    margin-left: 15vw;
+    margin-left: 5vw;
     margin-top: 8px;
     margin-bottom: 15px;
   }
@@ -75,14 +82,16 @@ html {
 
 .logo:hover {
   opacity: 0.5;
-  -webkit-filter: blur(1.5px);
+  -webkit-filter: blur(2px);
 }
 
 .logo {
   -webkit-filter: blur(0px);
   display: inline-block;
-  color: var(--white);
+  color: #ffffff;
   transition: all 0.2s;
+  
+  margin-top: 20px;
 }
 
 /* Nav menu */
@@ -99,10 +108,10 @@ html {
 .menu2 a {
   display: block;
   padding: 6px;
-  color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   text-align: right;
   z-index: 1;
 }
@@ -136,7 +145,8 @@ html {
 .nav {
   max-height: 0;
   transition: max-height 0.5s ease-out;
-  margin-right: 15vw;
+  margin-right: 5vw;
+  margin-top: 20px;
 }
 
 /* Menu Icon */
@@ -218,7 +228,6 @@ html {
 
   .menu2 a:hover {
     background-color: transparent;
-    color: var(--gray);
   }
 
   .hamb {
@@ -266,16 +275,17 @@ html {
 }
 
 .name {
-  color: #2f2f2f;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 80%;
   margin-left: 1cm;
-  letter-spacing: -2pt;
   z-index: 100;
 }
 
 .i {
+  color: #ffffff;
   font-size: 13vw;
   position: absolute;
   margin-left: 10px;
@@ -320,7 +330,7 @@ html {
 
 #fpl {
   text-decoration: none;
-  color: #2f2f2f;
+  color: #ffffff;
   z-index: 4;
 }
 
@@ -341,7 +351,7 @@ html {
 
 @media screen and (max-width: 600px) {
   .name {
-    font-size: 10vw;
+    font-size: 14vw;
     margin-top: 10vh;
   }
 
@@ -361,22 +371,22 @@ html {
 }
 
 .name2 {
-  color: #2f2f2f;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 200;
   line-height: 80%;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 601px) {
   .name2 {
-    font-size: 3vw;
+    font-size: 1.8vw;
   }
 }
 
 @media screen and (max-width: 600px) {
   .name2 {
     font-size: 5vw;
-    letter-spacing: 1%;
   }
 }
 
@@ -420,7 +430,7 @@ html {
 }
 
 .libox {
-  background-color: #ffffff;
+  background-color: #000000;
   position: relative;
   top: 0;
   bottom: 0;
@@ -487,13 +497,12 @@ a:active {
 
 #homeh {
   margin: auto;
-  color: white;
+  color: #ffffff;
   position: relative;
   font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   text-align: center;
   margin: 3px;
-  letter-spacing: 0.3rem;
   text-decoration: none;
 }
 
@@ -558,16 +567,21 @@ a:active {
   }
 }
 
-
-
-
-
-
 /* project pages */
 #topofpage {
-  margin-top: 40px;
+  margin-top: 0;
 }
 
+#topofpage {
+  height: 90vh;
+  overflow: hidden;
+}
+
+#topofpage .projectimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .information p {
   height: fit-content;
   display: block;
@@ -578,15 +592,16 @@ a:active {
   padding-top: 20vh;
   padding-bottom: 20vh;
   font-size: clamp(12px, 1.3vw, 22px);
+  color: #ffffff;
 }
 
 #leftlabel {
   margin-top: 40px;
   margin-bottom: 15px;
   font-style: italic;
-  font-size: clamp(12px, .8vw, 22px);
+  font-size: clamp(12px, 0.8vw, 22px);
   font-weight: 500;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {}
@@ -594,14 +609,12 @@ a:active {
 @media screen and (min-width: 1025px) {
   #leftlabel {
     margin-left: 15vw;
-    ;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #leftlabel {
     margin-left: 10px;
-    ;
   }
 }
 
@@ -613,7 +626,7 @@ a:active {
     font-style: italic;
     font-size: 2rem;
     font-weight: 500;
-    color: #9f9f9f;
+    color: #ffffff;
   }
 }
 
@@ -640,7 +653,7 @@ a:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  color: #000;
+  color: #ffffff;
 }
 
 #maltinfo {
@@ -667,7 +680,7 @@ a:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  color: #000;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1025px) {
@@ -691,7 +704,7 @@ a:active {
     text-align: left;
     font-size: 200%;
     font-weight: 400;
-    color: #4e4e4e;
+    color: #ffffff;
   }
 }
 
@@ -700,7 +713,7 @@ a:active {
     text-align: left;
     font-size: 100%;
     font-weight: 400;
-    color: #4e4e4e;
+    color: #ffffff;
   }
 } */
 
@@ -772,14 +785,14 @@ a:active {
   #projheader {
     font-weight: 600;
     font-size: 2rem;
-    color: #000;
+    color: #ffffff;
     line-height: 105%;
   }
 
   #projdescription {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    color: #9f9f9f;
+    color: #ffffff;
     margin-bottom: 20px;
     font-size: 1.2rem;
   }
@@ -803,14 +816,14 @@ a:active {
   #projsmallheader {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #9f9f9f;
+    color: #ffffff;
   }
 
   #tags {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    color: #9f9f9f;
+    color: #ffffff;
   }
 
   .tags {
@@ -828,7 +841,7 @@ a:active {
   #seemore {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #999999;
+    color: #ffffff;
     font-size: 1.5rem;
   }
 
@@ -883,7 +896,7 @@ a:active {
   }
 
   #projheader {
-    color: #000;
+    color: #ffffff;
     font-size: 4rem;
     font-weight: 400;
     line-height: 105%;
@@ -892,7 +905,7 @@ a:active {
   #projdescription {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    color: #9f9f9f;
+    color: #ffffff;
     margin-top: -10px;
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -917,14 +930,14 @@ a:active {
   #projsmallheader {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #9f9f9f;
+    color: #ffffff;
   }
 
   #tags {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    color: #9f9f9f;
+    color: #ffffff;
   }
 
   .tags {
@@ -942,7 +955,7 @@ a:active {
   #seemore {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    color: #000;
+    color: #ffffff;
     font-size: 2rem;
   }
 
@@ -969,10 +982,10 @@ a:active {
 }
 
 .projectimage {
+  width: 100%;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1018,15 +1031,12 @@ a:active {
     right: 0px;
   }
 
-  .projectimage {
-    width: 70vw;
-  }
+  
 
   .projimgwrap {
     position: relative;
     float: left;
     max-width: 45vw;
-    overflow: hidden;
   }
 
   .projimgwrap2 {
@@ -1041,7 +1051,8 @@ a:active {
   }
 
   .projimgwrap img {
-    height: 60vh;
+    height: auto;
+    width: 90vw;
   }
 
   #tags {
@@ -1075,9 +1086,7 @@ a:active {
     height: fit-content;
   }
 
-  .projectimage {
-    width: 100vw;
-  }
+  
 
   .projimgwrap {
     width: auto;
@@ -1087,8 +1096,178 @@ a:active {
   }
 
   .projimgwrap img {
-    height: 40vh;
+    width: 90vw;
     margin: auto;
+  }
+}
+
+
+
+/* Home Work Tile Cards */
+.work-tile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0;
+  background: #000;
+}
+
+.work-tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  color: #ffffff;
+  text-decoration: none;
+  background: #222222;
+}
+
+.work-tile-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.work-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.work-tile-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: clamp(24px, 4vw, 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.work-tile-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(30px, 4vw, 65px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.work-tile-info {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 32px;
+}
+
+.work-tile-info h3,
+.work-tile-date {
+  margin: 0;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(18px, 1.6vw, 30px);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.work-tile-date {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.work-tile-line {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.work-tile-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 8vw, 120px);
+}
+
+.work-tile-description p {
+  margin: 0;
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(12px, 1vw, 17px);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.work-tile,
+.work-tile:hover,
+.work-tile:focus,
+.work-tile:active {
+  color: #ffffff;
+  text-decoration: none;
+  filter: none;
+}
+
+.work-tile:hover .work-tile-image,
+.work-tile:hover .work-tile-content,
+.work-tile:hover .work-tile-info,
+.work-tile:hover .work-tile-description {
+  opacity: 1;
+  filter: none;
+}
+
+.work-tile:hover .work-tile-title {
+  opacity: 1;
+  filter: none;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 700px) {
+  .work-tile-list {
+    gap: 28px;
+  }
+
+  .work-tile {
+    aspect-ratio: auto;
+    min-height: 520px;
+  }
+
+  .work-tile-content {
+    min-height: 520px;
+    padding: 32px 24px 28px;
+  }
+
+  .work-tile-title {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .work-tile-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .work-tile-date {
+    text-align: left;
+  }
+
+  .work-tile-description {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
@@ -1120,7 +1299,7 @@ a:active {
 }
 
 .menu__link {
-  color: #000000;
+  color: #ffffff;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -1133,11 +1312,11 @@ a:active {
   text-decoration: none;
   filter: blur(2px);
   transition: 0.2s ease-in-out;
-  color: #000000;
+  color: #ffffff;
 }
 
 .footer p {
-  color: #adadad;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 300;
   margin-top: 10px;
@@ -1176,7 +1355,7 @@ a:active {
 /* Large Screen */
 @media screen and (min-width: 1025px) {
   #contactheader {
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     position: absolute;
@@ -1186,33 +1365,33 @@ a:active {
 
   #connect {
     margin: 0px;
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
   }
 
   #connect2 {
-    color: #2f2f2f;
+    color: #ffffff;
     font-weight: 500;
     line-height: 200%;
   }
 
   #connect2 a {
     text-decoration: none;
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
 
   #bio {
     margin: 0px;
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
   }
 
   #bio2 {
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 120%;
@@ -1257,14 +1436,14 @@ a:active {
 /* Medium Screen */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   #contactheader {
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
   }
 
   #connect {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: left;
@@ -1274,7 +1453,7 @@ a:active {
 
   #connect2 {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-weight: 500;
     line-height: 200%;
     font-size: 3rem;
@@ -1283,14 +1462,14 @@ a:active {
 
   #connect2 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
 
   #bio {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 150%;
@@ -1298,7 +1477,7 @@ a:active {
 
   #bio2 {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 120%;
@@ -1331,14 +1510,14 @@ a:active {
 /* Small Screen */
 @media screen and (max-width: 600px) {
   #contactheader {
-    color: #2f2f2f;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
   }
 
   #connect {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: left;
@@ -1348,7 +1527,7 @@ a:active {
 
   #connect2 {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-weight: 500;
     line-height: 200%;
     font-size: 2rem;
@@ -1357,14 +1536,14 @@ a:active {
 
   #connect2 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
 
   #bio {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 150%;
@@ -1372,7 +1551,7 @@ a:active {
 
   #bio2 {
     margin: 0px;
-    color: #000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 120%;
@@ -1457,128 +1636,376 @@ a:active {
   padding: 2vw;
 }
 
-#projectshowimg {
+
+/* Projects Index Page */
+.project-index {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.project-index-bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.project-index-bg::after {
+  content: "";
   position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
-@media screen and (min-width: 1025px) {
-  #projectlist {
-    margin-top: 0px;
-    padding: 80px;
-    height: 80vh;
-    font-size: 4vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    list-style: none;
-    line-height: 120%;
-  }
-
-  #projectshowimg {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #projectlist {
-    display: none;
-  }
-
-  #projectshowimg {
-    display: none;
-  }
-}
-
-#projectlist a {
-  text-decoration: none;
-  color: #2f2f2f;
-}
-
-#projectlist:hover>* {
-  opacity: 0.4;
-}
-
-#projectlist>*:hover {
+.project-index-bg-default {
+  background: #000;
   opacity: 1;
 }
 
-#projectlist>* {
-  transition: 200ms;
-}
-
-.card {
-  position: absolute;
-  width: 35vw;
-  right: 50px;
-  margin-top: 10vh;
+.project-index-list {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 80px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.project-index-list a:hover {
+  -webkit-filter: blur(4px);
+}
+
+.project-index-link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(30px, 3vw, 54px);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.project-index-link:hover,
+.project-index-link:focus,
+.project-index-link:active {
+  color: #ffffff;
+  text-decoration: none;
+  filter: none;
+}
+
+.project-index:has(.project-index-link:hover) .project-index-bg-default {
   opacity: 0;
-  transition: 200ms;
 }
 
-.card p {
-  font-size: small;
-}
-
-.card img {
-  width: 35vw;
-  margin-top: 10vh;
-}
-
-body:has(#vaultproj:hover) #p1 {
+.project-index:has(.project-index-link-throttlehaus:hover) .project-index-bg-throttlehaus,
+.project-index:has(.project-index-link-flourish:hover) .project-index-bg-flourish,
+.project-index:has(.project-index-link-vault:hover) .project-index-bg-vault,
+.project-index:has(.project-index-link-drew:hover) .project-index-bg-drew,
+.project-index:has(.project-index-link-porsche:hover) .project-index-bg-porsche,
+.project-index:has(.project-index-link-exercise:hover) .project-index-bg-exercise,
+.project-index:has(.project-index-link-lv:hover) .project-index-bg-lv,
+.project-index:has(.project-index-link-maltzan:hover) .project-index-bg-maltzan,
+.project-index:has(.project-index-link-owfog:hover) .project-index-bg-owfog,
+.project-index:has(.project-index-link-ux:hover) .project-index-bg-ux,
+.project-index:has(.project-index-link-lego:hover) .project-index-bg-lego,
+.project-index:has(.project-index-link-carhartt:hover) .project-index-bg-carhartt,
+.project-index:has(.project-index-link-nike:hover) .project-index-bg-nike,
+.project-index:has(.project-index-link-show:hover) .project-index-bg-show,
+.project-index:has(.project-index-link-mag:hover) .project-index-bg-mag,
+.project-index:has(.project-index-link-owproducts:hover) .project-index-bg-owproducts {
   opacity: 1;
 }
 
-body:has(#drewproj:hover) #p2 {
-  opacity: 1;
+.project-mobile-list {
+  display: none;
 }
 
-body:has(#lvproj:hover) #p3 {
-  opacity: 1;
+@media screen and (max-width: 700px) {
+  .project-index {
+    min-height: auto;
+    background: #fff;
+    padding: 72px 24px 48px;
+  }
+
+  .project-index-bg,
+  .project-index-list {
+    display: none;
+  }
+
+  .project-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .project-mobile-card {
+    position: relative;
+    display: block;
+    min-height: 520px;
+    overflow: hidden;
+    color: #ffffff;
+    text-decoration: none;
+    background: #000;
+  }
+
+  .project-mobile-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-mobile-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .project-mobile-card-content {
+    position: relative;
+    z-index: 2;
+    min-height: 520px;
+    padding: 32px 24px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-mobile-card-content h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: clamp(34px, 8vw, 52px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+  }
+
+  .project-mobile-card-meta {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .project-mobile-card-meta h3,
+  .project-mobile-card-meta p {
+    margin: 0;
+    font-size: clamp(20px, 5vw, 32px);
+    font-weight: 600;
+    line-height: 1.05;
+  }
+
+  .project-mobile-card-line {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .project-mobile-card-desc {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .project-mobile-card:hover,
+  .project-mobile-card:focus,
+  .project-mobile-card:active {
+    color: #ffffff;
+    text-decoration: none;
+    filter: none;
+  }
+}
+/* Fade other projects when hovering */
+
+.project-index-list:hover .project-index-link {
+  opacity: 0.2;
+  transition: opacity .6s ease;
 }
 
-body:has(#maltproj:hover) #p4 {
+
+.project-index-list .project-index-link:hover {
   opacity: 1;
+}
+/* Project hero overlay fix */
+body.project-page #topofpage {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
-body:has(#owfogproj:hover) #p5 {
-  opacity: 1;
+body.project-page #topofpage > .col-md-12 {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
-body:has(#uxproj:hover) #p6 {
-  opacity: 1;
+body.project-page .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
-body:has(#carproj:hover) #p7 {
-  opacity: 1;
+body.project-page .col-md-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-body:has(#nikeproj:hover) #p8 {
-  opacity: 1;
+body.project-page #topofpage .projectimage,
+body.project-page #topofpage .projecthero-video,
+body.project-page #topofpage video {
+  width: 100vw !important;
+  min-width: 100vw !important;
+  max-width: none !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
 }
 
-body:has(#showproj:hover) #p9 {
-  opacity: 1;
+body.project-page #boxcontainer {
+  position: absolute !important;
+  bottom: 40px !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+padding: 0 clamp(30px, 6vw, 100px) !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  align-items: end !important;
+  gap: 24px !important;
+  z-index: 5 !important;
+  color: #ffffff !important;
+}
+ /* body.project-page #boxcontainer {
+  position: absolute !important;
+  bottom: 40px !important;
+  left: 50% !important;
+
+  transform: translateX(-50%);
+
+  width: auto !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(3, 350px) !important;
+
+  gap: 100px !important;
+
+  align-items: end !important;
+
+  z-index: 5 !important;
+} */
+body.project-page #boxcontainer .box:nth-child(3) {
+  text-align: left !important;
+  transform: translateX(200px);
+}
+body.project-page #boxcontainer .box {
+  width: 100% !important;
+  height: auto !important;
 }
 
-body:has(#magproj:hover) #p10 {
-  opacity: 1;
+body.project-page #boxcontainer .box:nth-child(1) {
+  text-align: left !important;
 }
 
-body:has(#owprodproj:hover) #p11 {
-  opacity: 1;
+body.project-page #boxcontainer .box:nth-child(2) {
+  text-align: left !important;
 }
 
-body:has(#porscheproj:hover) #p12 {
-  opacity: 1;
+body.project-page #boxcontainer .box:nth-child(3) {
+  text-align: left !important;
 }
 
-body:has(#legoproj:hover) #p13 {
-  opacity: 1;
+body.project-page #boxcontainer h1,
+body.project-page #boxcontainer p {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", "helvetica-lt-pro", sans-serif;
 }
-body:has(#exerciseproj:hover) #p14 {
-  opacity: 1;
+
+body.project-page #boxcontainer h1 {
+  font-size: clamp(0.75rem, 1vw, 1.1rem) !important;
+  font-weight: 300 !important;
+  opacity: 0.75;
 }
-body:has(#flourishproj:hover) #p15 {
-  opacity: 1;
+
+body.project-page #boxcontainer p {
+  font-size: clamp(0.85rem, 1.3vw, 1.5rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+}
+
+@media screen and (max-width: 600px) {
+  body.project-page #boxcontainer {
+    bottom: 22px !important;
+    padding: 0 16px !important;
+    gap: 12px !important;
+  }
+
+  body.project-page #boxcontainer h1 {
+    font-size: 0.65rem !important;
+  }
+
+  body.project-page #boxcontainer p {
+    font-size: 0.7rem !important;
+    line-height: 1.15 !important;
+  }
+}
+#coverpage {
+  position: relative;
+}
+
+#coverpage .work-tile-content {
+  position: static;
+}
+
+#coverpage .work-tile-info h2 {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  margin: 0;
+  text-align: right;
+  z-index: 20;
+}
+#coverpage .work-tile-title {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+
+  transform: none;
+
+  width: auto;
+  margin: 0;
+
+  text-align: left;
+}
+body.project-page #boxcontainer.dark-project-info h1,
+body.project-page #boxcontainer.dark-project-info p {
+  color: #000000 !important;
 }
