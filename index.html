@@ -3,14 +3,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://use.typekit.net/rcq1sku.css">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <link href="https://use.typekit.net/rcq1sku.css" rel="stylesheet" />
   <title>Jace Kachlein Design Portfolio</title>
-  <link rel="stylesheet" href="assets/styles/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="assets/styles/bootstrap/css/bootstrap-theme.css" />
-  <link rel="stylesheet" href="assets/styles/main.css" />
+  <link href="assets/styles/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/styles/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+  <link href="assets/styles/main.css" rel="stylesheet" />
+  </link>
 </head>
 <style>
   * {
@@ -43,24 +44,31 @@
       font-size: 1.7rem;
     }
   }
+
+  /* Starting hidden states */
+  .header,
+  #coverpage .work-tile-title,
+  #coverpage .top-right-info h3,
+  #coverpage .work-tile-date {
+    opacity: 0;
+  }
+
+  /* Header fades in first */
+  .header {
+    animation: fadeReveal 1.2s ease forwards;
+    animation-delay: 0.2s;
+  }
 </style>
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <div class="videowrap">
-        <video width="100%" autoplay loop muted playsinline id="homevideo">
-          <source src="assets/images/homevideo.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
+
     <header class="header">
       <a href="index.html">
-        <img src="assets/images/logo.png" class="logo" />
-      </a>
-      <input class="side-menu" type="checkbox" id="side-menu" />
+        <img class="logo" src="assets/images/logo.png">
+        </img></a>
+      <input class="side-menu" id="side-menu" type="checkbox" />
       <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-
       <nav class="nav">
         <ul class="menu2">
           <li><a href="pages/projects.html">WORK</a></li>
@@ -80,63 +88,70 @@
         </div> -->
     <div class="row">
       <div class="col-md-12" id="coverpage">
+        <div class="hero-slideshow">
+          <div class="hero-slide slide-1"><img src="assets/images/Gallery/34.webp" /></div>
+          <div class="hero-slide slide-2"><img src="assets/images/Gallery/31.webp" /></div>
+          <div class="hero-slide slide-3"><img src="assets/images/Gallery/23.webp" /></div>
+          <div class="hero-slide slide-4"><img src="assets/images/Gallery/22.webp" /></div>
+          <div class="hero-slide slide-5"><img src="assets/images/Gallery/12.webp" /></div>
+          <div class="hero-slide slide-6"><img src="assets/images/Gallery/28.webp" /></div>
+          <div class="hero-slide slide-7"><img src="assets/images/Gallery/24.webp" /></div>
+          <div class="hero-slide slide-8"><img src="assets/images/Gallery/14.webp" /></div>
+        </div>
+        <div class="videowrap">
+          <video autoplay="" id="homevideo" loop="" muted="" playsinline="" width="100%">
+            <source src="assets/images/homevideo.webm" type="video/webm" />
+          </video>
+        </div>
         <div class="work-tile-content">
-          <h2 class="work-tile-title" style="font-weight: 400; font-size: clamp(45px, 6vw, 100px);">JACE<br>KACHLEIN</h2>
-
-          <div class="work-tile-info top-right-info">
-  <h3>GRAPHIC DESIGN<br>PORTFOLIO</h3>
-  <p class="work-tile-date">2020-2026</p>
+          <div class="hero-title-parallax">
+  <h2 class="work-tile-title" style="font-weight: 400; font-size: clamp(45px, 6vw, 100px);">
+    JACE<br />KACHLEIN
+  </h2>
 </div>
-
-          <div class="work-tile-line"></div>
-
-          <div class="work-tile-description">
-            <p>
+          <div class="hero-info-parallax">
+            <div class="work-tile-info top-right-info">
+              <h3>GRAPHIC DESIGN<br />PORTFOLIO</h3>
+              <p class="work-tile-date">2020-2026</p>
+            </div>
+            <div class="work-tile-line"></div>
+            <div class="work-tile-description">
+              <p>
               </p>
-            <p></p>
+              <p></p>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
     <section class="work-tile-list">
-
       <a class="work-tile" href="pages/porsche.html">
-        <img class="work-tile-image" src="assets/images/projectcard/porscheranimation-homecard.webp" alt="Project One">
-
+        <img alt="Project One" class="work-tile-image"
+          src="assets/images/projectcard/porscheranimation-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">PORSCHE ANIMATION</h2>
-
           <div class="work-tile-info">
-            <h3>3D ANIMATION DESIGNED<br>IN CINEMA 4D</h3>
+            <h3>3D ANIMATION DESIGNED<br />IN CINEMA 4D</h3>
             <p class="work-tile-date">3D/ANIMATION</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
-            <p>A multi scene animation fully constructed & designed in Cinema 4D.
+            <p>A multi scene animation fully constructed &amp; designed in Cinema 4D.
               The cars were designed and rigged using Cinema 4D's character
               rigging system.</p>
             <p></p>
           </div>
         </div>
       </a>
-
-
       <a class="work-tile" href="pages/vault.html">
-        <img class="work-tile-image" src="assets/images/projectcard/vault-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/vault-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">VAULT</h2>
-
           <div class="work-tile-info">
-            <h3>SUB-BRAND<br>DESIGN</h3>
+            <h3>SUB-BRAND<br />DESIGN</h3>
             <p class="work-tile-date">3D/BRAND DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Off-White is branching into the collectible contemporary art
               market with their new sub brand “Vault”. A total of two
@@ -148,20 +163,15 @@
           </div>
         </div>
       </a>
-
       <a class="work-tile" href="pages/lvcwip.html">
-        <img class="work-tile-image" src="assets/images/projectcard/lvbags-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/lvbags-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">LOUIS VUITTON X CARHARTT</h2>
-
           <div class="work-tile-info">
             <h3>BRAND COLLABORATION</h3>
             <p class="work-tile-date">3D/FASHION DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>An unlikely brand collaboration between unique-streetwear brand
               Carhartt Work in Progress and world-renowned designer brand Louis
@@ -172,18 +182,14 @@
         </div>
       </a>
       <a class="work-tile" href="pages/vault.html">
-        <img class="work-tile-image" src="assets/images/projectcard/lego2-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/lego2-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">LEGO COLLABORATION</h2>
-
           <div class="work-tile-info">
-            <h3>PRODUCT<br>DESIGN</h3>
+            <h3>PRODUCT<br />DESIGN</h3>
             <p class="work-tile-date">3D/PRODUCT DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>A LEGO Star Wars campaign concept using unexpected fashion
               collaborations to create buzz, attention, and a modern pop-culture launch moment.</p>
@@ -191,18 +197,14 @@
         </div>
       </a>
       <a class="work-tile" href="pages/owfog.html">
-        <img class="work-tile-image" src="assets/images/projectcard/essentialsbags-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/essentialsbags-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">OFF WHITE X FEAR OF GOD</h2>
-
           <div class="work-tile-info">
-            <h3>SUBHEADER AND OTHER<br>INFORMATION</h3>
+            <h3>SUBHEADER AND OTHER<br />INFORMATION</h3>
             <p class="work-tile-date">3D/PRODUCT DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Fashion brands Off-White and Fear of God are coming together in
               this conceptual collaboration to design a series of bags to be
@@ -211,20 +213,15 @@
           </div>
         </div>
       </a>
-
       <a class="work-tile" href="pages/lego.html">
-        <img class="work-tile-image" src="assets/images/projectcard/lego-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/lego-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">LEGO COLLAB</h2>
-
           <div class="work-tile-info">
-            <h3>SUBHEADER AND OTHER<br>INFORMATION</h3>
+            <h3>SUBHEADER AND OTHER<br />INFORMATION</h3>
             <p class="work-tile-date">3D/PRODUCT DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Celebrate the return of Star Wars with a dynamic LEGO campaign that reimagines the iconic partnership
               between two legendary brands. To bring a modern edge and connect with new audiences, the campaign
@@ -234,20 +231,15 @@
           </div>
         </div>
       </a>
-
       <a class="work-tile" href="pages/carhartt.html">
-        <img class="work-tile-image" src="assets/images/projectcard/carharttspeaker-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/carharttspeaker-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">CARHARTT SPEAKER</h2>
-
           <div class="work-tile-info">
-            <h3>RUGGED WORK SPEAKER<br></h3>
+            <h3>RUGGED WORK SPEAKER<br /></h3>
             <p class="work-tile-date">3D/PRODUCT DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Focusing on product design and usability this Carhartt speaker
               concept aims at addressing a possible gap in the market. The
@@ -256,20 +248,15 @@
           </div>
         </div>
       </a>
-
       <a class="work-tile" href="pages/nike.html">
-        <img class="work-tile-image" src="assets/images/projectcard/nikesculpture-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/nikesculpture-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">NIKE SUSTAINABILITY</h2>
-
           <div class="work-tile-info">
-            <h3>BRAND CAMPAIGN<br>DESIGN</h3>
+            <h3>BRAND CAMPAIGN<br />DESIGN</h3>
             <p class="work-tile-date">3D/CAMPAIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Nike’s pledge to sustainability and their “move to zero”
               sustainability branding inspired this marketing campaign pitch
@@ -279,20 +266,15 @@
           </div>
         </div>
       </a>
-
       <a class="work-tile" href="pages/owproducts.html">
-        <img class="work-tile-image" src="assets/images/projectcard/offwhitepillows-homecard.webp" alt="Project Two">
-
+        <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/offwhitepillows-homecard.webp" />
         <div class="work-tile-content">
           <h2 class="work-tile-title">OFF WHITE PRODUCTS</h2>
-
           <div class="work-tile-info">
             <h3>PRODUCT CONCEPTS</h3>
             <p class="work-tile-date">3D/PRODUCT DESIGN</p>
           </div>
-
           <div class="work-tile-line"></div>
-
           <div class="work-tile-description">
             <p>Inspired by the shoes designed by Off-White and Nike, which
               feature strong colors and extremely unique designs, I designed 3
@@ -301,7 +283,6 @@
           </div>
         </div>
       </a>
-
     </section>
     <footer class="footer">
       <ul class="menu">
@@ -310,10 +291,38 @@
         <li class="menu__item"><a class="menu__link" href="pages/about.html">About</a></li>
         <li class="menu__item"><a class="menu__link" href="pages/contact.html">Contact</a></li>
       </ul>
-      <p align="center">&copy;2024 Jace Kachlein | All Rights Reserved</p>
+      <p align="center">©2024 Jace Kachlein | All Rights Reserved</p>
     </footer>
   </div>
+  <script>
+  const heroSlideshow = document.querySelector(".hero-slideshow");
+  const homeVideo = document.querySelector("#homevideo");
+  const heroInfo = document.querySelector(".hero-info-parallax");
+  const heroTitle = document.querySelector(".hero-title-parallax");
+  const header = document.querySelector(".header");
 
+  window.addEventListener("scroll", function () {
+    const scrollY = window.scrollY;
+
+    heroSlideshow.style.transform =
+      `translate3d(0, ${scrollY * .5}px, 0)`;
+
+    homeVideo.style.transform =
+      `translate3d(0, ${scrollY * 0.2}px, 0)`;
+
+    heroTitle.style.transform =
+      `translate3d(0, ${scrollY * .3}px, 0)`;
+
+    heroInfo.style.transform =
+      `translate3d(0, ${scrollY * -.25}px, 0)`;
+
+    if (scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 
 </html>
