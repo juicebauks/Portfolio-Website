@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Global / Base
+   ========================================================================== */
+
 body {
   margin: 0;
   padding: 0;
@@ -34,50 +38,50 @@ html {
   box-sizing: border-box;
 }
 
-.menu2 li {
-  list-style: none;
-}
+/* ==========================================================================
+   Header / Navigation
+   ========================================================================== */
 
-/* Header */
 .header {
-  background-color: #00000000;
-  box-shadow: 1px 1px 5px 0px var(--gray);
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 40px;
+  height: 60px;
   z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+
+  transition:
+    background-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-@media screen and (min-width: 601px) {
-  .header {
-    position: fixed;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    position: fixed;
-  }
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.128);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.059);
 }
 
 /* Logo */
 
-@media screen and (min-width: 601px) {
-  .logo {
-    height: 25px;
-    margin-left: 5vw;
-    margin-top: 8px;
-    margin-bottom: 15px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logo {
-    height: 20px;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.logo {
+  display: block;
+  color: #ffffff;
+  -webkit-filter: blur(0);
+  transition: all 0.2s;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .logo:hover {
@@ -85,55 +89,57 @@ html {
   -webkit-filter: blur(2px);
 }
 
-.logo {
-  -webkit-filter: blur(0px);
-  display: inline-block;
-  color: #ffffff;
-  transition: all 0.2s;
-  
-  margin-top: 20px;
+@media screen and (min-width: 601px) {
+  .logo {
+    height: 25px;
+    margin-left: 5vw;
+  }
 }
 
-/* Nav menu */
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 20px;
+    margin-left: 15px;
+  }
+}
+
+/* Main nav */
+
 .nav {
   width: 100%;
-  height: 100%;
+  max-height: 0;
   position: fixed;
-  background-color: #efeeec;
-  overflow: hidden;
+  top: 60px;
+  right: 0;
   z-index: 2;
-  top: 40px;
+
+  overflow: hidden;
+  background-color: #000000;
+
+  transition: max-height 0.5s ease-out;
+}
+
+.menu2 {
+  margin: 0;
+  padding: 0;
+}
+
+.menu2 li {
+  list-style: none;
 }
 
 .menu2 a {
   display: block;
   padding: 6px;
+
   color: #ffffff;
   font-family: "helvetica-lt-pro", sans-serif;
   font-weight: 400;
   font-size: 14px;
   text-align: right;
+  text-decoration: none;
+
   z-index: 1;
-}
-
-@media screen and (min-width: 601px) {
-  .menu2 a {
-    margin-right: 40px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .menu2 {
-    margin-top: 50%;
-    margin-bottom: 50%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .menu2 a {
-    font-size: 40px;
-    text-align: center;
-  }
 }
 
 .menu2 a:hover {
@@ -142,41 +148,30 @@ html {
   transition: 0.2s ease-in-out;
 }
 
-.nav {
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-  margin-right: 5vw;
-  margin-top: 20px;
-}
+/* Hamburger */
 
-/* Menu Icon */
 .hamb {
   cursor: pointer;
-  float: right;
   padding: 20px 25px;
 }
 
-/* Style label tag */
-
 .hamb-line {
-  background: #000000;
   display: block;
-  height: 3px;
   position: relative;
   width: 24px;
+  height: 3px;
+  background: #ffffff;
 }
-
-/* Style span tag */
 
 .hamb-line::before,
 .hamb-line::after {
-  background: #000000;
   content: "";
   display: block;
-  height: 100%;
   position: absolute;
-  transition: all 0.2s ease-out;
   width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transition: all 0.2s ease-out;
 }
 
 .hamb-line::before {
@@ -191,10 +186,8 @@ html {
   display: none;
 }
 
-/* Hide checkbox */
-/* Toggle menu icon */
-.side-menu:checked~nav {
-  max-height: 100%;
+.side-menu:checked~.nav {
+  max-height: 100vh;
 }
 
 .side-menu:checked~.hamb .hamb-line {
@@ -202,28 +195,58 @@ html {
 }
 
 .side-menu:checked~.hamb .hamb-line::before {
-  transform: rotate(-45deg);
   top: 0;
+  transform: rotate(-45deg);
 }
 
 .side-menu:checked~.hamb .hamb-line::after {
-  transform: rotate(45deg);
   top: 0;
+  transform: rotate(45deg);
 }
 
-/* Responsiveness */
-@media (min-width: 768px) {
+/* Desktop nav */
+
+@media screen and (min-width: 768px) {
   .nav {
-    max-height: none;
-    top: 0;
     position: relative;
-    float: right;
+    top: 0;
+    right: auto;
     width: fit-content;
+    height: 60px;
+    max-height: none;
+    margin-right: 5vw;
+
+    display: flex;
+    align-items: center;
+
+    overflow: visible;
     background-color: transparent;
   }
 
+  .menu2 {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
   .menu2 li {
-    float: left;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  .menu2 a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-right: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1;
+  }
+
+  .menu2 li:last-child a {
+    margin-right: 0;
   }
 
   .menu2 a:hover {
@@ -235,37 +258,176 @@ html {
   }
 }
 
-/* Cover Video */
+/* Mobile nav */
+
+@media screen and (max-width: 767px) {
+  .menu2 li {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(20px);
+  }
+
+  .side-menu:checked~.nav .menu2 li {
+    animation: mobileNavItemReveal 0.8s ease forwards;
+  }
+
+  .side-menu:checked~.nav .menu2 li:nth-child(1) {
+    animation-delay: 0.15s;
+  }
+
+  .side-menu:checked~.nav .menu2 li:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  .side-menu:checked~.nav .menu2 li:nth-child(3) {
+    animation-delay: 0.35s;
+  }
+
+  @keyframes mobileNavItemReveal {
+    from {
+      opacity: 0;
+      filter: blur(12px);
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+
+  .hamb {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .side-menu:checked~.hamb .hamb-line::before,
+  .side-menu:checked~.hamb .hamb-line::after {
+    background: #ffffff;
+  }
+
+  .header {
+    z-index: 100;
+  }
+
+  .header:has(.side-menu:checked) {
+    background-color: #000000;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+    max-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background-color: #000000;
+    z-index: 90;
+
+    transition: max-height 0.6s cubic-bezier(.16, 1, .3, 1);
+    opacity 0.6s ease,
+    visibility 0.6s ease,
+    transform 0.6s ease,
+    backdrop-filter 1s ease;
+  }
+
+  .side-menu:checked~.nav {
+    opacity: 1;
+    max-height: 100vh;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+
+  .menu2 {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .menu2 li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu2 a {
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    color: #ffffff;
+    font-size: clamp(38px, 12vw, 72px);
+    line-height: 0.9;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Home Hero Video / Parallax
+   ========================================================================== */
 
 .videowrap {
-  overflow: hidden;
-  margin: auto;
   position: absolute;
-  height: 90vh;
   width: 100vw;
+  height: 90vh;
+  margin: auto;
+  overflow: hidden;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  filter: blur(20px);
+  animation: videoFadeIn 2s ease forwards;
 }
 
 #homevideo {
   display: block;
   margin: 0 auto;
+  will-change: transform;
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 1025px) {
   #homevideo {
     width: 75%;
+    height: 115%;
+    object-fit: cover;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #homevideo {
     width: 250%;
+    height: 115%;
+    object-fit: cover;
   }
 }
 
-/* Home Page */
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
 #coverpage {
   position: relative;
   width: 100%;
@@ -390,7 +552,7 @@ html {
   }
 }
 
-/* Homecards */
+/* Home Cards / Legacy */
 
 #homelist {
   padding-top: 5vh;
@@ -553,7 +715,7 @@ a:active {
   }
 }
 
-// Short screens
+/* Short screens */
 
 @media (max-height: 480px) {
   #homeitem li {
@@ -567,7 +729,7 @@ a:active {
   }
 }
 
-/* project pages */
+/* Project Pages / Shared */
 #topofpage {
   margin-top: 0;
 }
@@ -582,6 +744,7 @@ a:active {
   height: 100%;
   object-fit: cover;
 }
+
 .information p {
   height: fit-content;
   display: block;
@@ -618,106 +781,7 @@ a:active {
   }
 }
 
-/* @media screen and (min-width: 1025px) {
-  #leftlabel {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    margin-left: 15vw;
-    font-style: italic;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #ffffff;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #leftlabel {
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  #topofpage {
-    margin-top: 100px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #topofpage {
-    margin-top: 30px;
-  }
-}
-
-.information {
-  height: fit-content;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: #ffffff;
-}
-
-#maltinfo {
-  margin-bottom: 200px;
-}
-
-@media screen and (min-width: 1025px) {
-  .information {
-    width: 35vw;
-    margin-top: 300px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .information {
-    width: 80vw;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-
-.information2 {
-  height: fit-content;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: #ffffff;
-}
-
-@media screen and (min-width: 1025px) {
-  .information2 {
-    width: 35vw;
-    margin-top: 300px;
-    margin-bottom: 300px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .information2 {
-    width: 80vw;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  #shortinfo {
-    text-align: left;
-    font-size: 200%;
-    font-weight: 400;
-    color: #ffffff;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #shortinfo {
-    text-align: left;
-    font-size: 100%;
-    font-weight: 400;
-    color: #ffffff;
-  }
-} */
-
-/* Project Page */
+/* Project List Sections */
 @media only screen and (max-width: 1024px) {
   #row1 {
     display: none;
@@ -754,7 +818,7 @@ a:active {
   }
 }
 
-/* Small Screen */
+/* Project Sections: Small Screen */
 @media only screen and (max-width: 600px) {
   .line {
     width: 95vw;
@@ -867,7 +931,7 @@ a:active {
   }
 }
 
-/* Medium Screen */
+/* Project Sections: Medium Screen */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .line {
     width: 95vw;
@@ -1031,7 +1095,7 @@ a:active {
     right: 0px;
   }
 
-  
+
 
   .projimgwrap {
     position: relative;
@@ -1086,7 +1150,7 @@ a:active {
     height: fit-content;
   }
 
-  
+
 
   .projimgwrap {
     width: auto;
@@ -1100,8 +1164,6 @@ a:active {
     margin: auto;
   }
 }
-
-
 
 /* Home Work Tile Cards */
 .work-tile-list {
@@ -1433,7 +1495,7 @@ a:active {
   }
 }
 
-/* Medium Screen */
+/* Project Sections: Medium Screen */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   #contactheader {
     color: #ffffff;
@@ -1507,7 +1569,7 @@ a:active {
   }
 }
 
-/* Small Screen */
+/* Project Sections: Small Screen */
 @media screen and (max-width: 600px) {
   #contactheader {
     color: #ffffff;
@@ -1581,7 +1643,7 @@ a:active {
   }
 }
 
-/* owproducts video */
+/* OW Products Video */
 .videowrap2 {
   overflow: hidden;
   margin: auto;
@@ -1617,7 +1679,6 @@ a:active {
 }
 
 .gcol a img {
-  display: ;
   margin-bottom: 1vw;
   width: 100%;
   height: auto;
@@ -1625,7 +1686,6 @@ a:active {
 }
 
 .gcol img {
-  display: ;
   margin-bottom: 1vw;
   width: 100%;
   height: auto;
@@ -1635,7 +1695,6 @@ a:active {
 #galleryrow {
   padding: 2vw;
 }
-
 
 /* Projects Index Page */
 .project-index {
@@ -1679,18 +1738,16 @@ a:active {
   flex-direction: column;
   justify-content: center;
 }
-.project-index-list a:hover {
-  -webkit-filter: blur(4px);
-}
+
 
 .project-index-link {
   display: block;
   color: #ffffff;
   text-decoration: none;
   font-family: "helvetica-lt-pro", sans-serif;
-  font-size: clamp(30px, 3vw, 54px);
+  font-size: clamp(20px, 2vw, 38px);
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -1834,17 +1891,28 @@ a:active {
     filter: none;
   }
 }
-/* Fade other projects when hovering */
 
-.project-index-list:hover .project-index-link {
-  opacity: 0.2;
-  transition: opacity .6s ease;
+/* Smooth transitions */
+.project-index-link {
+  transition:
+    opacity 0.6s ease,
+    filter 0.6s ease;
 }
 
 
+/* fade + blur all other projects */
+.project-index-list:hover .project-index-link {
+  opacity: 0.9;
+  filter: blur(3px);
+}
+
+
+/* keep hovered project sharp */
 .project-index-list .project-index-link:hover {
   opacity: 1;
+  filter: blur(0);
 }
+
 /* Project hero overlay fix */
 body.project-page #topofpage {
   position: relative !important;
@@ -1856,7 +1924,7 @@ body.project-page #topofpage {
   overflow: hidden !important;
 }
 
-body.project-page #topofpage > .col-md-12 {
+body.project-page #topofpage>.col-md-12 {
   position: relative !important;
   width: 100vw !important;
   max-width: 100vw !important;
@@ -1895,7 +1963,7 @@ body.project-page #boxcontainer {
   left: 0 !important;
   width: 100% !important;
   margin: 0 !important;
-padding: 0 clamp(30px, 6vw, 100px) !important;
+  padding: 0 clamp(30px, 6vw, 100px) !important;
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   align-items: end !important;
@@ -1903,7 +1971,8 @@ padding: 0 clamp(30px, 6vw, 100px) !important;
   z-index: 5 !important;
   color: #ffffff !important;
 }
- /* body.project-page #boxcontainer {
+
+/* body.project-page #boxcontainer {
   position: absolute !important;
   bottom: 40px !important;
   left: 50% !important;
@@ -1925,6 +1994,7 @@ body.project-page #boxcontainer .box:nth-child(3) {
   text-align: left !important;
   transform: translateX(200px);
 }
+
 body.project-page #boxcontainer .box {
   width: 100% !important;
   height: auto !important;
@@ -1977,6 +2047,7 @@ body.project-page #boxcontainer p {
     line-height: 1.15 !important;
   }
 }
+
 #coverpage {
   position: relative;
 }
@@ -1993,6 +2064,7 @@ body.project-page #boxcontainer p {
   text-align: right;
   z-index: 20;
 }
+
 #coverpage .work-tile-title {
   position: absolute;
   top: 150px;
@@ -2005,7 +2077,272 @@ body.project-page #boxcontainer p {
 
   text-align: left;
 }
+
 body.project-page #boxcontainer.dark-project-info h1,
 body.project-page #boxcontainer.dark-project-info p {
   color: #000000 !important;
+}
+
+/* ==========================================================================
+   Homepage Intro Animation / Hero Layers
+   ========================================================================== */
+
+/* Keep hero media clipped inside the first screen only. */
+#coverpage {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #000000;
+}
+
+#coverpage .work-tile-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+
+/* Slideshow stays behind the transparent video and never bleeds into projects. */
+.hero-slideshow {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 0;
+  overflow: hidden;
+  background: #000000;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: heroSlideshow 48s infinite;
+}
+
+.hero-slide img {
+  display: block;
+
+  width: 130%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: translateX(-20%);
+}
+
+/* Slide timing */
+
+.slide-1 {
+  animation-delay: 0s;
+}
+
+.slide-2 {
+  animation-delay: -42s;
+}
+
+.slide-3 {
+  animation-delay: -36s;
+}
+
+.slide-4 {
+  animation-delay: -30s;
+}
+
+.slide-5 {
+  animation-delay: -24s;
+}
+
+.slide-6 {
+  animation-delay: -18s;
+}
+
+.slide-7 {
+  animation-delay: -12s;
+}
+
+.slide-8 {
+  animation-delay: -6s;
+}
+
+@keyframes heroSlideshow {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0.4;
+  }
+
+  10% {
+    opacity: 0.4;
+  }
+
+  12.5% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Transparent hero video sits above the slideshow. */
+.videowrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  filter: blur(20px);
+  animation: videoFadeIn 2s ease forwards;
+  pointer-events: none;
+}
+
+#homevideo {
+  display: block;
+  margin: 0 auto;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (min-width: 1025px) {
+  #homevideo {
+    width: 75%;
+    height: 115%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #homevideo {
+    width: 250%;
+    height: 115%;
+    object-fit: cover;
+  }
+}
+
+/* Main title */
+#coverpage .work-tile-title {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  width: auto;
+  margin: 0;
+  text-align: left;
+  filter: blur(12px);
+  animation: fadeReveal 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Info, line, and description move together on scroll. */
+#coverpage .hero-info-parallax {
+  width: 100%;
+  margin-top: auto;
+  will-change: transform;
+}
+
+/* Line grows left to right with an opening blur. */
+#coverpage .work-tile-line {
+  width: 0;
+  opacity: 0;
+  filter: blur(15px);
+  transform-origin: left;
+  animation: lineGrow 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
+  animation-delay: 1s;
+}
+
+#coverpage .top-right-info h3 {
+  filter: blur(8px);
+  animation: fadeReveal 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+#coverpage .work-tile-date {
+  filter: blur(8px);
+  animation: fadeReveal 1.5s ease forwards;
+  animation-delay: 2.3s;
+}
+
+@keyframes lineGrow {
+  0% {
+    width: 0;
+    opacity: 0;
+    filter: blur(15px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeReveal {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Project cards must sit on their own black layer under the hero. */
+.work-tile-list {
+  position: relative;
+  z-index: 5;
+  background: #000000;
+}
+
+.hero-title-parallax {
+  will-change: transform;
+}
+
+#coverpage .hero-title-parallax {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  z-index: 3;
+  will-change: transform;
+}
+
+#coverpage .hero-title-parallax .work-tile-title {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: auto;
+  margin: 0;
+  text-align: left;
 }
