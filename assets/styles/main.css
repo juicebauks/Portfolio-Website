@@ -1842,13 +1842,13 @@ a:active {
 
   .project-mobile-card-content h2 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 100%;
     margin: 0;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: clamp(34px, 8vw, 52px);
+    font-size: clamp(26px, 7vw, 40px);
     font-weight: 300;
     line-height: 1.05;
     letter-spacing: 0.03em;
@@ -1862,13 +1862,21 @@ a:active {
     gap: 20px;
   }
 
-  .project-mobile-card-meta h3,
-  .project-mobile-card-meta p {
-    margin: 0;
-    font-size: clamp(20px, 5vw, 32px);
-    font-weight: 600;
-    line-height: 1.05;
-  }
+  .project-mobile-card-meta h3 {
+  margin: 0;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(12px, 3vw, 16px);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.project-mobile-card-meta p {
+  margin: 0;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: clamp(12px, 3vw, 16px);
+  font-weight: 300;
+  line-height: 1.15;
+}
 
   .project-mobile-card-line {
     width: 100%;
@@ -2345,4 +2353,35 @@ body.project-page #boxcontainer.dark-project-info p {
   width: auto;
   margin: 0;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  body.project-page #topofpage,
+  body.project-page #topofpage > .col-md-12 {
+    height: 30vh !important;
+    min-height: 30vh !important;
+  }
+
+  body.project-page #topofpage .projectimage,
+  body.project-page #topofpage .projecthero-video,
+  body.project-page #topofpage video {
+    height: 30vh !important;
+    min-height: 30vh !important;
+  }
+}
+@media screen and (max-width: 700px) {
+
+  .work-tile-info h3 {
+    font-size: clamp(12px, 3vw, 16px);
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  .work-tile-date {
+    font-size: clamp(12px, 3vw, 16px);
+    font-family: "helvetica-lt-pro", sans-serif;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
 }
