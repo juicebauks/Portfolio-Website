@@ -89,14 +89,14 @@
     <div class="row">
       <div class="col-md-12" id="coverpage">
         <div class="hero-slideshow">
-          <div class="hero-slide slide-1"><img src="assets/images/Gallery/34.webp" /></div>
-          <div class="hero-slide slide-2"><img src="assets/images/Gallery/31.webp" /></div>
-          <div class="hero-slide slide-3"><img src="assets/images/Gallery/23.webp" /></div>
-          <div class="hero-slide slide-4"><img src="assets/images/Gallery/22.webp" /></div>
-          <div class="hero-slide slide-5"><img src="assets/images/Gallery/12.webp" /></div>
-          <div class="hero-slide slide-6"><img src="assets/images/Gallery/28.webp" /></div>
-          <div class="hero-slide slide-7"><img src="assets/images/Gallery/24.webp" /></div>
-          <div class="hero-slide slide-8"><img src="assets/images/Gallery/14.webp" /></div>
+          <div class="hero-slide slide-1"><img src="assets/images/projectcard/Home-cover-1.webp" /></div>
+          <div class="hero-slide slide-2"><img src="assets/images/projectcard/Home-cover-2.webp" /></div>
+          <div class="hero-slide slide-3"><img src="assets/images/projectcard/Home-cover-3.webp" /></div>
+          <div class="hero-slide slide-4"><img src="assets/images/projectcard/Home-cover-4.webp" /></div>
+          <div class="hero-slide slide-5"><img src="assets/images/projectcard/Home-cover-5.webp" /></div>
+          <div class="hero-slide slide-6"><img src="assets/images/projectcard/Home-cover-6.webp" /></div>
+          <div class="hero-slide slide-7"><img src="assets/images/projectcard/Home-cover-7.webp" /></div>
+          <div class="hero-slide slide-8"><img src="assets/images/projectcard/Home-cover-8.webp" /></div>
         </div>
         <div class="videowrap">
           <video autoplay id="homevideo" loop muted playsinline preload="auto" width="100%">
@@ -105,10 +105,10 @@
         </div>
         <div class="work-tile-content">
           <div class="hero-title-parallax">
-  <h2 class="work-tile-title" style="font-weight: 400; font-size: clamp(45px, 6vw, 100px);">
-    JACE<br />KACHLEIN
-  </h2>
-</div>
+            <h2 class="work-tile-title" style="font-weight: 400; font-size: clamp(45px, 6vw, 100px);">
+              JACE<br />KACHLEIN
+            </h2>
+          </div>
           <div class="hero-info-parallax">
             <div class="work-tile-info top-right-info">
               <h3>GRAPHIC DESIGN<br />PORTFOLIO</h3>
@@ -209,7 +209,7 @@
           </div>
         </div>
       </a>
-      
+
       <a class="work-tile" href="pages/carhartt.html">
         <img alt="Project Two" class="work-tile-image" src="assets/images/projectcard/carharttspeaker-homecard.webp" />
         <div class="work-tile-content">
@@ -274,34 +274,34 @@
     </footer>
   </div>
   <script>
-  const heroSlideshow = document.querySelector(".hero-slideshow");
-  const homeVideo = document.querySelector("#homevideo");
-  const heroInfo = document.querySelector(".hero-info-parallax");
-  const heroTitle = document.querySelector(".hero-title-parallax");
-  const header = document.querySelector(".header");
+    const heroSlideshow = document.querySelector(".hero-slideshow");
+    const homeVideo = document.querySelector("#homevideo");
+    const heroInfo = document.querySelector(".hero-info-parallax");
+    const heroTitle = document.querySelector(".hero-title-parallax");
+    const header = document.querySelector(".header");
 
-  window.addEventListener("scroll", function () {
-    const scrollY = window.scrollY;
+    window.addEventListener("scroll", function () {
+      const scrollY = window.scrollY;
 
-    heroSlideshow.style.transform =
-      `translate3d(0, ${scrollY * .5}px, 0)`;
+      heroSlideshow.style.transform =
+        `translate3d(0, ${scrollY * .5}px, 0)`;
 
-    homeVideo.style.transform =
-      `translate3d(0, ${scrollY * 0.2}px, 0)`;
+      homeVideo.style.transform =
+        `translate3d(0, ${scrollY * 0.2}px, 0)`;
 
-    heroTitle.style.transform =
-      `translate3d(0, ${scrollY * .3}px, 0)`;
+      heroTitle.style.transform =
+        `translate3d(0, ${scrollY * .3}px, 0)`;
 
-    heroInfo.style.transform =
-      `translate3d(0, ${scrollY * -.25}px, 0)`;
+      heroInfo.style.transform =
+        `translate3d(0, ${scrollY * -.25}px, 0)`;
 
-    if (scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-</script>
+      if (scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
 </body>
 
 </html>
