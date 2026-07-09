@@ -2402,3 +2402,13 @@ button:active {
   outline: none;
   background: transparent;
 }
+@media screen and (max-width: 700px) {
+
+  body,
+  html,
+  .project-index,
+  .project-mobile-list {
+    background-color: #000 !important;
+  }
+
+}
