@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
 <link href="https://use.typekit.net/ozx6lnu.css" rel="stylesheet"/>
-<link href="https://use.typekit.net/ozx6lnu.css" rel="stylesheet"/>
+
 <title>Owproducts | Jace Kachlein Design Portfolio</title><link href="https://jace.kachlein/pages/owproducts.html" rel="canonical"/>
 <meta content="Explore Owproducts, a graphic design portfolio project by Jace Kachlein featuring branding, art direction, product design, digital design, and visual storytelling." name="description"/>
 <meta content="Jace Kachlein" name="author"/>
@@ -52,14 +52,14 @@
 <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 <nav class="nav">
 <ul class="menu2">
-<li><a href="projects.html">WORK</a></li>
-<li><a href="gallery.html">GALLERY</a> </li>
-<li><a href="contact.html">CONTACT</a></li>
-</ul>
+          <li><a href="projects.html">WORK</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
 </nav>
 </header>
 <div class="row" id="topofpage">
-<div class="col-md-12"><video autoplay="" class="projecthero-video" autoplay muted loop playsinline preload="auto">
+<div class="col-md-12"><video autoplay="" class="projecthero-video" muted loop playsinline preload="auto">
 <source src="../assets/images/owproducts/offwhitenikevideo.mp4" type="video/mp4"/>
 </video>
 <div id="boxcontainer">
@@ -182,5 +182,23 @@
 </div>
 </div>
 </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const header = document.querySelector(".header");
+      if (!header) return;
+
+      function updateHeader() {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+    });
+  </script>
 </body>
 </html>

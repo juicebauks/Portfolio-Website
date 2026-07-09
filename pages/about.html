@@ -62,7 +62,7 @@
 <nav class="nav">
 <ul class="menu2">
 <li><a href="projects.html">WORK</a></li>
-<li><a href="gallery.html">GALLERY</a> </li>
+<li><a href="gallery.html">GALLERY</a></li>
 <li><a href="contact.html">CONTACT</a></li>
 </ul>
 </nav>
@@ -113,5 +113,23 @@
 </ul>
 <p align="center">©2024 Jace Kachlein | All Rights Reserved</p>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    const updateHeader = function () {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+  });
+</script>
 </body>
 </html>
