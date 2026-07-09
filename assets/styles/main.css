@@ -2385,3 +2385,20 @@ body.project-page #boxcontainer.dark-project-info p {
   }
 
 }
+/* Remove mobile tap highlight */
+a,
+button,
+.hamb,
+.menu2 a,
+.nav a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove click focus box */
+a:focus,
+a:active,
+button:focus,
+button:active {
+  outline: none;
+  background: transparent;
+}
