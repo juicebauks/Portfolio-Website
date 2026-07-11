@@ -439,7 +439,7 @@ html {
 .name {
   color: #ffffff;
   font-family: "helvetica-lt-pro", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   line-height: 80%;
   margin-left: 1cm;
@@ -1428,8 +1428,8 @@ a:active {
   #connect {
     margin: 0px;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 600;
   }
 
   #connect2 {
@@ -1441,8 +1441,8 @@ a:active {
   #connect2 a {
     text-decoration: none;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
   }
 
   #bio {
@@ -1506,8 +1506,8 @@ a:active {
   #connect {
     margin: 0px;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
     text-align: left;
     font-size: 3rem;
     margin-top: 100px;
@@ -1525,8 +1525,8 @@ a:active {
   #connect2 a {
     text-decoration: none;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
   }
 
   #bio {
@@ -1580,8 +1580,8 @@ a:active {
   #connect {
     margin: 0px;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
     text-align: left;
     font-size: 2rem;
     margin-top: 100px;
@@ -1599,8 +1599,8 @@ a:active {
   #connect2 a {
     text-decoration: none;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: "helvetica-lt-pro", sans-serif;
+  font-weight: 300;
   }
 
   #bio {
