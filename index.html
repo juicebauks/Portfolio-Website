@@ -103,10 +103,25 @@
           <div class="hero-slide slide-8"><img src="assets/images/projectcard/Home-cover-8.webp" /></div>
         </div>
         <div class="videowrap">
-          <video autoplay id="homevideo" loop muted playsinline preload="auto" width="100%">
-            <source src="assets/images/homevideo.webm" type="video/webm" />
-          </video>
-        </div>
+  <video
+    id="homevideo"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+  >
+    <source
+      src="assets/images/homevideo-hevc.mov"
+      type='video/mp4; codecs="hvc1"'
+    />
+
+    <source
+      src="assets/images/homevideo.webm"
+      type="video/webm"
+    />
+  </video>
+</div>
         <div class="work-tile-content">
           <div class="hero-title-parallax">
             <h2 class="work-tile-title" style="font-weight: 400; font-size: clamp(45px, 6vw, 100px);">
