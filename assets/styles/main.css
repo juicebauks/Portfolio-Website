@@ -2433,3 +2433,7 @@ button:active {
   object-fit: contain !important;
   display: block !important;
 }
+
+#homevideo {
+    mix-blend-mode: screen;
+}
