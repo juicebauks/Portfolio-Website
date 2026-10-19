@@ -1764,6 +1764,7 @@ a:active {
   opacity: 0;
 }
 
+.project-index:has(.project-index-link-mkstudio:hover) .project-index-bg-mkstudio,
 .project-index:has(.project-index-link-throttlehaus:hover) .project-index-bg-throttlehaus,
 .project-index:has(.project-index-link-flourish:hover) .project-index-bg-flourish,
 .project-index:has(.project-index-link-vault:hover) .project-index-bg-vault,
