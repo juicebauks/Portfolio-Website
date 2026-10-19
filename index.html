@@ -62,6 +62,7 @@
     animation: fadeReveal 1.2s ease forwards;
     animation-delay: 0.2s;
   }
+  
 </style>
 
 <body>
@@ -92,16 +93,7 @@
         </div> -->
     <div class="row">
       <div class="col-md-12" id="coverpage">
-        <div class="hero-slideshow">
-          <div class="hero-slide slide-1"><img src="assets/images/projectcard/Home-cover-1.webp" /></div>
-          <div class="hero-slide slide-2"><img src="assets/images/projectcard/Home-cover-2.webp" /></div>
-          <div class="hero-slide slide-3"><img src="assets/images/projectcard/Home-cover-3.webp" /></div>
-          <div class="hero-slide slide-4"><img src="assets/images/projectcard/Home-cover-4.webp" /></div>
-          <div class="hero-slide slide-5"><img src="assets/images/projectcard/Home-cover-5.webp" /></div>
-          <div class="hero-slide slide-6"><img src="assets/images/projectcard/Home-cover-6.webp" /></div>
-          <div class="hero-slide slide-7"><img src="assets/images/projectcard/Home-cover-7.webp" /></div>
-          <div class="hero-slide slide-8"><img src="assets/images/projectcard/Home-cover-8.webp" /></div>
-        </div>
+        
         <div class="videowrap">
   <video
     id="homevideo"
@@ -111,7 +103,10 @@
     playsinline
     preload="auto"
   >
-    
+    <source
+      src="assets/images/homevideo-hevc.mov"
+      type='video/mp4; codecs="hvc1"'
+    />
 
     <source
       src="assets/images/homevideo.webm"
