@@ -82,22 +82,9 @@
 </style>
 </head>
 <body>
+  <div id="site-header"></div>
   <div class="container-fluid">
-    <header class="header">
-      <a href="../index.html">
-        <img alt="Jace Kachlein design portfolio logo" class="logo" decoding="async" loading="lazy"
-          src="../assets/images/logo.png" />
-      </a>
-      <input class="side-menu" id="side-menu" type="checkbox" />
-      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-      <nav class="nav">
-        <ul class="menu2">
-          <li><a href="projects.html">PORTFOLIO</a></li>
-          <li><a href="gallery.html">GALLERY</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+  
     <div class="row">
       <div class="col-med-12" id="projectpage">
         <div class="name"><span style="letter-spacing: -.28rem;">Galle</span>ry.</div>
@@ -191,15 +178,7 @@
     </div>
     <div class="row">
       <div class="col-md-12" id="footercolumn">
-        <footer class="footer">
-          <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="projects.html">Work</a></li>
-            <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-          </ul>
-          <p align="center">©2024 Jace Kachlein | All Rights Reserved</p>
-        </footer>
+        <div id="site-footer"></div>|<div id="site-footer"></div>
       </div>
     </div>
   </div>
@@ -221,6 +200,7 @@
     window.addEventListener("scroll", updateHeader, { passive: true });
   });
 </script>
+<script src="/assets/scripts/components.js"></script>
 </body>
 
 </html>
