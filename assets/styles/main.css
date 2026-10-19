@@ -2433,3 +2433,63 @@ button:active {
   object-fit: contain !important;
   display: block !important;
 }
+/* Hero Let's Create Button */
+
+#coverpage .hero-create-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: fit-content;
+  margin: 0 auto 35px;
+  padding: 14px 28px;
+
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+
+  color: #ffffff;
+  font-family: "helvetica-lt-pro", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+
+  position: relative;
+  z-index: 10;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+    transform: translateY(-20px);
+}
+
+/* Arrow */
+#coverpage .hero-create-btn span {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+#coverpage .hero-create-btn:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+}
+
+#coverpage .hero-create-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  #coverpage .hero-create-btn {
+    padding: 12px 24px;
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+}
