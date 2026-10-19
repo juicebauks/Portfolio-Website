@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent graphic design services by Jace Kachlein. Brand identity, logo design, rebranding, marketing materials, digital design, and 3D visualization.">
+  <title>Work With Me | Jace Kachlein</title>
+  <link rel="icon" href="../assets/images/icons/favicon.ico">
+  <link rel="stylesheet" href="https://use.typekit.net/rcq1sku.css">
+  <link rel="stylesheet" href="../assets/styles/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <style>
+    /* Work with me page. Scoped styles keep the existing site intact. */
+    .services-page { background: #000; color: #fff; font-family: "helvetica-lt-pro", sans-serif; font-weight: 300; }
+    .services-page a { color: inherit; }
+    .services-page .page-shell { width: min(100% - 10vw, 1500px); margin-inline: auto; }
+    .services-page .eyebrow { font-size: 12px; font-weight: 400; letter-spacing: .17em; text-transform: uppercase; }
+    .services-page .services-hero { min-height: min(850px, 95svh); padding: 175px 0 80px; display: flex; flex-direction: column; justify-content: space-between; }
+    .services-page .hero-heading { max-width: 1300px; margin: 50px 0 70px; font-size: clamp(68px, 11.5vw, 185px); font-weight: 300; line-height: .87; letter-spacing: -.075em; }
+    .services-page .hero-heading em { font-style: normal; color: #8d8d8d; }
+    .services-page .hero-bottom { display: flex; justify-content: space-between; align-items: end; gap: 32px; border-top: 1px solid #5b5b5b; padding-top: 25px; }
+    .services-page .hero-bottom p { max-width: 440px; margin: 0; font-size: clamp(17px, 1.7vw, 25px); line-height: 1.3; }
+    .services-page .section { padding: 135px 0; border-top: 1px solid #414141; }
+    .services-page .section-heading { font-size: clamp(44px, 6vw, 95px); font-weight: 300; letter-spacing: -.055em; line-height: 1.02; margin: 22px 0 55px; }
+    .services-page .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; }
+    .services-page .intro-copy { max-width: 600px; font-size: clamp(19px, 2vw, 29px); line-height: 1.35; }
+    .services-page .intro-copy p + p { margin-top: 25px; }
+    .services-page .services-list { border-top: 1px solid #555; }
+    .services-page .service { display: grid; grid-template-columns: 70px minmax(230px, 1fr) minmax(250px, .85fr); gap: 25px; padding: 34px 0; border-bottom: 1px solid #444; align-items: start; }
+    .services-page .service-number { font-size: 13px; color: #999; padding-top: 9px; }
+    .services-page .service h3 { font-size: clamp(28px, 3.2vw, 49px); font-weight: 300; line-height: 1.1; letter-spacing: -.04em; margin: 0; }
+    .services-page .service p { font-size: clamp(15px, 1.2vw, 18px); line-height: 1.55; color: #bcbcbc; margin: 0; }
+    .services-page .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 45px; margin-top: 70px; }
+    .services-page .approach-item { border-top: 1px solid #666; padding-top: 22px; }
+    .services-page .approach-item span { color: #aaa; font-size: 13px; }
+    .services-page .approach-item h3 { font-size: clamp(25px, 2.5vw, 38px); font-weight: 300; margin: 35px 0 15px; }
+    .services-page .approach-item p { font-size: 16px; line-height: 1.55; color: #bcbcbc; max-width: 350px; }
+    .services-page .cta-section { padding: 145px 0 160px; border-top: 1px solid #555; }
+    .services-page .cta-section h2 { font-size: clamp(62px, 10vw, 160px); line-height: .94; letter-spacing: -.07em; font-weight: 300; margin: 30px 0 55px; }
+    .services-page .cta-row { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
+    .services-page .cta-row p { max-width: 430px; font-size: clamp(17px, 1.5vw, 23px); line-height: 1.35; }
+    .services-page .outline-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 45px; padding: 18px 25px; border: 1px solid #fff; border-radius: 100px; font-size: 13px; font-weight: 400; letter-spacing: .08em; white-space: nowrap; text-decoration: none; transition: background .3s ease, color .3s ease; }
+    .services-page .outline-button:hover, .services-page .outline-button:focus-visible { background: #fff; color: #000; text-decoration: none; }
+    .services-page .outline-button .arrow { font-size: 19px; line-height: 1; transition: transform .3s ease; }
+    .services-page .outline-button:hover .arrow { transform: translate(3px, -3px); }
+    .services-page .page-footer { padding: 35px 0; border-top: 1px solid #444; display: flex; justify-content: space-between; gap: 25px; font-size: 13px; color: #aaa; }
+    .services-page .page-footer a { text-decoration: none; }
+    .services-page .page-footer a:hover { color: #fff; }
+    @media (max-width: 767px) {
+      .services-page .page-shell { width: calc(100% - 40px); }
+      .services-page .services-hero { min-height: 80svh; padding-top: 145px; padding-bottom: 50px; }
+      .services-page .hero-heading { font-size: clamp(65px, 15vw, 115px); margin: 55px 0; }
+      .services-page .hero-bottom, .services-page .cta-row { align-items: start; flex-direction: column; }
+      .services-page .section { padding: 85px 0; }
+      .services-page .intro-grid { grid-template-columns: 1fr; gap: 20px; }
+      .services-page .service { grid-template-columns: 35px 1fr; gap: 12px; padding: 28px 0; }
+      .services-page .service p { grid-column: 2; }
+      .services-page .approach-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 50px; }
+      .services-page .approach-item h3 { margin-top: 20px; }
+      .services-page .cta-section { padding: 95px 0; }
+      .services-page .page-footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .services-page *, .services-page *::before, .services-page *::after { transition-duration: .01ms !important; }
+    }
+    .services-page .hero-heading,
+.services-page .section-heading,
+.services-page .cta-section h2 {
+  letter-spacing: -4px;
+}
+  </style>
+</head>
+<body>
+  <div class="container-fluid services-page">
+    <header class="header">
+      <a href="../index.html" aria-label="Jace Kachlein home"><img class="logo" src="../assets/images/logo.png" alt="Jace Kachlein"></a>
+      <input class="side-menu" id="side-menu" type="checkbox">
+      <label class="hamb" for="side-menu" aria-label="Toggle navigation"><span class="hamb-line"></span></label>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="menu2">
+          <li><a href="projects.html">WORK</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="services-hero page-shell" aria-labelledby="page-title">
+        <span class="eyebrow">INDEPENDENT GRAPHIC DESIGNER / CREATIVE SERVICES</span>
+        <h1 class="hero-heading" id="page-title">LET'S<br><em>CREATE.</em></h1>
+        <div class="hero-bottom">
+          <p>Thoughtful design for brands with something to say.</p>
+          <a class="outline-button" href="contact.html">START A PROJECT <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="intro-heading">
+        <div class="page-shell intro-grid">
+          <div>
+            <span class="eyebrow">01 / ABOUT THE WORK</span>
+            <h2 class="section-heading" id="intro-heading">GOOD DESIGN<br>GOES DEEPER.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>I'm Jace, an independent graphic designer working across brand identity, digital experiences, and visual communication.</p>
+            <p>From building something new to reimagining what's already there, I create distinctive, considered design that looks good, feels intentional, and works across every touchpoint.</p>
+            <p>Whether you need a single asset or a complete visual direction, I bring ideas to life with a mix of strategy, experimentation, and attention to detail.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="services-heading">
+        <div class="page-shell">
+          <span class="eyebrow">02 / WHAT I DO</span>
+          <h2 class="section-heading" id="services-heading">CREATIVE SERVICES.</h2>
+          <div class="services-list">
+            <article class="service"><span class="service-number">01</span><h3>Logo Design</h3><p>Distinctive marks, wordmarks, and visual signatures designed to make your business recognizable and memorable.</p></article>
+            <article class="service"><span class="service-number">02</span><h3>Brand Identity</h3><p>Complete visual systems, including typography, color palettes, graphic elements, brand guidelines, and real-world applications.</p></article>
+            <article class="service"><span class="service-number">03</span><h3>Rebranding &amp; Refreshes</h3><p>A new perspective on an existing brand. Modernize your look, strengthen consistency, or rethink your identity from the ground up.</p></article>
+            <article class="service"><span class="service-number">04</span><h3>Marketing &amp; Print</h3><p>Campaign graphics, business cards, packaging, signage, brochures, invitations, catalogs, and other branded materials.</p></article>
+            <article class="service"><span class="service-number">05</span><h3>Web &amp; Digital</h3><p>Website design, digital layouts, social content, email graphics, and responsive visual experiences that carry your brand online.</p></article>
+            <article class="service"><span class="service-number">06</span><h3>3D &amp; Motion</h3><p>Product visualization, 3D concepts, animation, and motion graphics that give brands an additional dimension.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="approach-heading">
+        <div class="page-shell">
+          <span class="eyebrow">03 / THE APPROACH</span>
+          <h2 class="section-heading" id="approach-heading">BUILT WITH INTENTION.</h2>
+          <div class="approach-grid">
+            <article class="approach-item"><span>01 / DISCOVER</span><h3>Understand</h3><p>We start with your business, audience, goals, and the direction you want to go.</p></article>
+            <article class="approach-item"><span>02 / DESIGN</span><h3>Explore</h3><p>I develop and refine a visual direction that feels distinctive and right for your brand.</p></article>
+            <article class="approach-item"><span>03 / DELIVER</span><h3>Bring it to life</h3><p>We turn the direction into polished, practical assets ready to use across the places your brand shows up.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" aria-labelledby="cta-heading">
+        <div class="page-shell">
+          <span class="eyebrow">04 / HAVE SOMETHING IN MIND?</span>
+          <h2 id="cta-heading">LET'S MAKE<br>IT HAPPEN.</h2>
+          <div class="cta-row">
+            <p>Have a project, a brand that needs a refresh, or an idea you're ready to bring to life? I'd love to hear about it.</p>
+            <a class="outline-button" href="contact.html">LET'S CREATE <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer page-shell">
+      <span>© <span id="copyright-year">2026</span> JACE KACHLEIN</span>
+      <span><a href="../index.html">HOME</a> &nbsp; / &nbsp; <a href="projects.html">PORTFOLIO</a> &nbsp; / &nbsp; <a href="contact.html">CONTACT</a></span>
+    </footer>
+  </div>
+  <script>
+    const header = document.querySelector('.header');
+    const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 50);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
