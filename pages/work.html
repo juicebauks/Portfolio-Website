@@ -39,10 +39,45 @@
     .services-page .cta-section h2 { font-size: clamp(62px, 10vw, 160px); line-height: .94; letter-spacing: -.07em; font-weight: 300; margin: 30px 0 55px; }
     .services-page .cta-row { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
     .services-page .cta-row p { max-width: 430px; font-size: clamp(17px, 1.5vw, 23px); line-height: 1.35; }
-    .services-page .outline-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 45px; padding: 18px 25px; border: 1px solid #fff; border-radius: 100px; font-size: 13px; font-weight: 400; letter-spacing: .08em; white-space: nowrap; text-decoration: none; transition: background .3s ease, color .3s ease; }
-    .services-page .outline-button:hover, .services-page .outline-button:focus-visible { background: #fff; color: #000; text-decoration: none; }
-    .services-page .outline-button .arrow { font-size: 19px; line-height: 1; transition: transform .3s ease; }
-    .services-page .outline-button:hover .arrow { transform: translate(3px, -3px); }
+    /* Shared button styling to match the homepage */
+    .services-page .outline-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: fit-content;
+      padding: 14px 28px;
+      background: transparent;
+      border: 1.5px solid #ffffff;
+      border-radius: 50px;
+      color: #ffffff;
+      font-family: "helvetica-lt-pro", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      white-space: nowrap;
+      position: relative;
+      z-index: 10;
+      transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+    }
+    .services-page .outline-button svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      transition: transform .3s ease;
+    }
+    .services-page .outline-button:hover,
+    .services-page .outline-button:focus-visible {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+    }
+    .services-page .outline-button:hover svg,
+    .services-page .outline-button:focus-visible svg {
+      transform: translate(3px, -3px);
+    }
     .services-page .page-footer { padding: 35px 0; border-top: 1px solid #444; display: flex; justify-content: space-between; gap: 25px; font-size: 13px; color: #aaa; }
     .services-page .page-footer a { text-decoration: none; }
     .services-page .page-footer a:hover { color: #fff; }
@@ -59,15 +94,14 @@
       .services-page .approach-item h3 { margin-top: 20px; }
       .services-page .cta-section { padding: 95px 0; }
       .services-page .page-footer { flex-direction: column; }
+      .services-page .outline-button { padding: 12px 24px; font-size: 12px; }
     }
+    .services-page .hero-heading,
+    .services-page .section-heading,
+    .services-page .cta-section h2 { letter-spacing: -4px; }
     @media (prefers-reduced-motion: reduce) {
       .services-page *, .services-page *::before, .services-page *::after { transition-duration: .01ms !important; }
     }
-    .services-page .hero-heading,
-.services-page .section-heading,
-.services-page .cta-section h2 {
-  letter-spacing: -4px;
-}
   </style>
 </head>
 <body>
@@ -91,7 +125,7 @@
         <h1 class="hero-heading" id="page-title">LET'S<br><em>CREATE.</em></h1>
         <div class="hero-bottom">
           <p>Thoughtful design for brands with something to say.</p>
-          <a class="outline-button" href="contact.html">START A PROJECT <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="outline-button" href="contact.html">START A PROJECT <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </section>
 
@@ -142,7 +176,7 @@
           <h2 id="cta-heading">LET'S MAKE<br>IT HAPPEN.</h2>
           <div class="cta-row">
             <p>Have a project, a brand that needs a refresh, or an idea you're ready to bring to life? I'd love to hear about it.</p>
-            <a class="outline-button" href="contact.html">LET'S CREATE <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="outline-button" href="contact.html">LET'S CREATE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </div>
       </section>
